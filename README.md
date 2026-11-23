@@ -2,7 +2,7 @@
 
 **Founder of [Flamy Studio](https://flamy.studio) · Backend & Infrastructure**
 
-Founder by choice, sysadmin by necessity.
+Engineer by day, debugger by night.
 
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=go,rust,py,php,ts,elixir,debian,docker,nginx,postgres,redis,bash&amp;theme=light&amp;perline=6">
