@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="294" viewBox="0 0 760 294" role="img" aria-labelledby="title desc">
+  <title id="title">Crimson terminal — Meow as a Service</title>
+  <desc id="desc">A playful terminal with a blinking orange cat, typing commands, and fictional service status messages.</desc>
+  <defs>
+    <clipPath id="cmd1"><rect class="type1" x="28" y="66" width="440" height="20"/></clipPath>
+    <clipPath id="cmd2"><rect class="type2" x="28" y="116" width="440" height="20"/></clipPath>
+    <style>
+      text { font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace; }
+      .main { font-size: 15px; fill: #d7dce3; }
+      .prompt { fill: #ffad56; font-weight: 600; }
+      .muted { fill: #9ca8b7; }
+      .ok { fill: #75d99c; }
+      .warn { fill: #f7bd72; }
+      .type1 { animation: type1 15s steps(22,end) infinite; }
+      .type2 { animation: type2 15s steps(36,end) infinite; }
+      .out1 { animation: out1 15s linear infinite; }
+      .out2 { animation: out2 15s linear infinite; }
+      .cursor { animation: cursor 1s step-end infinite; }
+      .eyes { transform-box: fill-box; transform-origin: center; animation: blink 5.5s ease-in-out infinite; }
+      .tail { transform-origin: 655px 207px; animation: sway 3.2s ease-in-out infinite; }
+      .led { animation: pulse 3s ease-in-out infinite; }
+      @keyframes type1 { 0% {width:0px} 10%,100% {width:440px} }
+      @keyframes type2 { 0%,19% {width:0px} 34%,100% {width:440px} }
+      @keyframes out1 { 0%,10% {opacity:0} 11%,100% {opacity:1} }
+      @keyframes out2 { 0%,34% {opacity:0} 35%,100% {opacity:1} }
+      @keyframes cursor { 0%,49% {opacity:1} 50%,100% {opacity:0} }
+      @keyframes blink { 0%,46%,52%,100% {transform:scaleY(1)} 49% {transform:scaleY(.10)} }
+      @keyframes sway { 0%,100% {transform:rotate(-7deg)} 50% {transform:rotate(9deg)} }
+      @keyframes pulse { 0%,100% {opacity:.6} 50% {opacity:1} }
+      @media (prefers-reduced-motion: reduce) { .type1,.type2,.out1,.out2,.cursor,.eyes,.tail,.led {animation:none!important} }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="758" height="292" rx="12" fill="#11151c" stroke="#373f4b" stroke-width="1.5"/>
+  <path d="M13 2H747Q758 2 758 13V44H2V13Q2 2 13 2Z" fill="#1d232d"/>
+  <path d="M2 44H758" stroke="#373f4b"/>
+  <circle cx="22" cy="23" r="5.5" fill="#ff746d"/><circle cx="40" cy="23" r="5.5" fill="#eeb85b"/><circle cx="58" cy="23" r="5.5" fill="#68c78a"/>
+  <text x="380" y="27" font-size="13" text-anchor="middle" fill="#c4ccd7">crimson@flamy: ~</text>
+  <circle class="led" cx="712" cy="23" r="4" fill="#75d99c"/><text x="723" y="27" font-size="10" fill="#9ca8b7">LIVE</text>
+  <g class="main">
+    <text x="28" y="81" clip-path="url(#cmd1)"><tspan class="prompt">$ </tspan>whoami</text>
+    <g class="out1"><text x="28" y="106">Founder of Flamy Studio</text></g>
+    <text x="28" y="131" clip-path="url(#cmd2)"><tspan class="prompt">$ </tspan>systemctl status crimson</text>
+    <g class="out2">
+      <circle cx="34" cy="152" r="4.5" fill="#75d99c"/><text x="46" y="157">crimson.service - Founder</text>
+      <text x="46" y="180"><tspan class="muted">Active: </tspan><tspan class="ok">running (probably)</tspan></text>
+      <text x="46" y="202"><tspan class="muted">Sleep:  </tspan>disabled</text>
+      <text x="46" y="224"><tspan class="muted">Mode:   </tspan>Meow as a Service</text>
+      <text x="46" y="246" class="warn">Warning: too many side projects</text>
+      <text x="28" y="273" class="prompt">$</text><rect class="cursor" x="46" y="260" width="8" height="15" rx="1" fill="#ffad56"/>
+    </g>
+  </g>
+  <path d="M470 66V267" stroke="#29313d" stroke-dasharray="3 5"/>
+  <!-- Original vector mascot; no scripts or external resources. -->
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <path class="tail" d="M647 210Q698 218 699 181Q700 167 687 162" fill="none" stroke="#9e4729" stroke-width="15"/>
+    <path class="tail" d="M647 210Q698 218 699 181Q700 167 687 162" fill="none" stroke="#e98743" stroke-width="10"/>
+    <path d="M552 224Q549 187 574 174L627 174Q654 188 649 224Z" fill="#d87636" stroke="#9e4729" stroke-width="2.5"/>
+    <path d="M546 148V91Q546 85 553 89L577 109Q600 101 624 109L649 89Q655 85 655 93V148Q655 178 630 186Q600 195 571 186Q546 179 546 148Z" fill="#f09a52" stroke="#9e4729" stroke-width="2.5"/>
+    <path d="M554 100V123L572 113Z M647 100V123L629 113Z" fill="#f4bd91"/>
+    <path d="M588 110L594 123 M600 108V123 M612 110L606 123" stroke="#c46a36" stroke-width="3" fill="none"/>
+    <path d="M559 141L570 145 M557 150L568 152 M642 141L631 145 M644 150L633 152" stroke="#c46a36" stroke-width="2" fill="none"/>
+    <g class="eyes" fill="#22232a"><rect x="574" y="133" width="12" height="19" rx="5"/><rect x="615" y="133" width="12" height="19" rx="5"/></g>
+    <ellipse cx="600" cy="164" rx="24" ry="15" fill="#ffce9f"/>
+    <path d="M594 157H606L600 162Z" fill="#66372f"/>
+    <path d="M600 162V165Q595 171 590 165M600 165Q605 171 610 165" stroke="#66372f" stroke-width="2" fill="none"/>
+    <path d="M558 205Q566 195 579 204L584 217H558Z M619 217L624 204Q637 195 645 205V217Z" fill="#f6ab68" stroke="#9e4729" stroke-width="2"/>
+    <path d="M538 204H662L651 241H549Z" fill="#333d4c" stroke="#627084" stroke-width="2"/>
+    <path d="M542 241H658L667 247H533Z" fill="#4c596b" stroke="#627084" stroke-width="1.5"/>
+    <path d="M592 215L584 222L592 229M601 229H613" stroke="#ffad56" stroke-width="2.5" fill="none"/>
+  </g>
+  <text x="600" y="271" font-size="11" fill="#9ca8b7" text-anchor="middle">chief meow officer</text>
+</svg>
